@@ -11,7 +11,7 @@ Neke tvrtke uz svoje račune šalju uplatnice koje ne sadrže 2D kod, što onemo
 Pomoću ovog generatora možete generirati uplatnicu sa 2D kodom, koju ćete moći uplatiti na blagajnama Konzuma, kioscima Tiska i slično...
 
 ## Demo
-Demo ove web aplikacije možete pronaći na adresi [knee-cola.github.io/generator-opce-uplatnice/](https://knee-cola.github.io/generator-opce-uplatnice/).
+Demo ove web aplikacije možete pronaći na adresi [vbresan.github.io/uplatime/](https://vbresan.github.io/uplatime/).
 
 # Detalji imaplementacija
 ## Spremanje naloga u web preglednik
