@@ -41,7 +41,7 @@
 	const _allowedCharacters = jQuery.merge(jQuery.merge([], _allowedSingleByteCharacters), _allowedTwoByteCharacters);
 	
 	const _priceFieldLength = 15;
-	const _pricePattern = "^[0-9]+,[0-9]{2}$";
+	const _pricePattern = "^[0-9]+(,[0-9]{2})?$";
 	
 	const _delimiter = String.fromCharCode(0x0A);
 	const _header = "HRVHUB30";
