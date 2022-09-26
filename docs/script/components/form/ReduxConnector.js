@@ -2,6 +2,25 @@ import { updateValue } from 'actions';
 import { paramName } from 'paymentParamsFacade';
 
 /**
+ */
+function formatCurrencyInput(value) {
+
+	value = value.replace(".", ",").replace(/[^0-9,]*/g, "");
+								
+	let parts = value.split(",");
+	if (parts.length > 2) {
+		value = parts[0] + "," + parts.slice(1).join("");
+	}
+	
+	parts = value.split(",");
+	if (parts.length > 1) {
+		value = parts[0] + "," + parts[1].substring(0, 2);
+	}
+					
+	return value;
+} 
+
+/**
  * Metoda za zadanu komponentu kreira connected verziju, pri čemu je način mapiranja state-a na property-e parametriziran putem `id`-a
  * @param {*} id jedinstvena oznaka instance komponente - odgovara nazivu varijable (key) u Redux store-u
  * @param {*} Component komponenta koju treba spojiti na Redux
@@ -28,6 +47,9 @@ const createConnection = (id, Component) => {
     const mapDispatchToProps = (dispatch, ownProps) => {
         return {
             onChange: (ev) => {
+				if (id == "iznos") {
+					ev.target.value = formatCurrencyInput(ev.target.value);
+				}
                 dispatch(updateValue(id, ev.target.value))
             },
             ...ownProps
