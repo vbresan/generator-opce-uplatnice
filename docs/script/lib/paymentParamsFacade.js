@@ -1,3 +1,5 @@
+import { FormatCurrency } from 'Format';
+
 export const reduxID = {
     Iznos : 'iznos',
     ImePlatitelja : 'platitelj__ime',
@@ -34,7 +36,11 @@ export const nalog2params = nalog => {
     // prepisujem payment params iz 
     for(var key in nalog) {
         if(nalog.hasOwnProperty(key) && paramName.hasOwnProperty(key)) {
-            paymentParams[ paramName[key] ] = nalog[key];
+			if (key == "iznos") {
+				paymentParams[ paramName[key] ] = FormatCurrency(nalog[key]);
+			} else {
+				paymentParams[ paramName[key] ] = nalog[key];
+			} 
         }
     }
 
