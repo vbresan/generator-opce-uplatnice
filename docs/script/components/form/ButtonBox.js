@@ -1,6 +1,7 @@
 import { clearForm } from 'actions';
 
 export const ButtonBox = props => <fieldset className="fieldset-novi-nalog">
+	<button name="catch-enter" onClick={props.onClick} style={{display:"none"}} />
     <button name="novi-nalog" onClick={props.onClick}>NOVI NALOG</button>
     <button name="print" onClick={props.onClick}>ISPIS NALOGA</button>
 </fieldset>;
