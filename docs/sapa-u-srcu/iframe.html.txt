@@ -1,0 +1,9 @@
+<html>
+<head>
+</head>
+<body>
+	<!-- Poèetak isjeèka - sljedeæu liniju kopirajte i dodajte u svoju web stranicu unutar 'body' html taga. -->
+	<iframe src="https://uplatime.com/sapa-u-srcu/" width="940" height="650" style="border:none;overflow:scroll;"></iframe>
+	<!-- Kraj isjeèka -->
+</body>
+</html>
