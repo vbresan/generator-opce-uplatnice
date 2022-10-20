@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Udruga Amazonas - Donacija</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Udruga Amazonas - Donacija - Bar kod generator za uplatnice HUB 3A">
+    <link rel="stylesheet" type="text/css" href="../style.css" async />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81SL566QVR"></script>
+    <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-81SL566QVR');
+    </script>
+</head>
+<body>
+   	<table style="margin-left:auto;margin-right:auto">
+   		<tr>
+   			<td>
+    			<div class="centered-container">
+			        <div></div>
+			        <div id="container"></div>
+					<div class="uplatnica__disclaimer">
+			        	<p><strong>VAŽNO UPOZORENJE</strong></p>
+			          	<p>Autor ove web aplikacije NE jamči za ispravnost generiranog 2D koda. OBAVEZNO prije korištenje ove uplatnice programom za skeniranje 2D koda provjerite da li su informacije sadržane u kodu ispravne. Činom upotrebe ovog generatora preuzimate punu materijalnu i pravnu odgovornost za posljedice koje korištenje generirane uplatnice može imati!</p>
+			      	</div>			        
+		        </div>
+	        </td>
+        </tr>
+	</table>
+	<br />
+    <script src="https://unpkg.com/react@16.5.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.5.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/redux@4.0.0/dist/redux.js"></script>
+    <script src="https://unpkg.com/react-redux@5.0.7/dist/react-redux.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Material+Icons" rel="stylesheet" lazyload="1" />
+    <script src="../script/lib/bcmath-min.js"></script>
+	<script src="../script/lib/pdf417-min.js"></script>
+    <script src="../script/lib/BarcodePayment.js?v=1"></script>
+    <script src="../script/lib/Blob.js"></script>
+
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../script/components/Format.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../script/lib/paymentParamsFacade.js"></script>
+
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../script/redux/actions.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./reducers.js"></script>
+    
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../script/components/form/ReduxConnector.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../script/components/form/ButtonBox.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../script/components/form/TextInput.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../script/components/form/SelectBase.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../script/components/form/IntentCodes.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../script/components/form/PaymentModels.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../script/components/form/SpremljeniNaloziSelect.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../script/components/form/TextArea.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../script/components/form/Potvrda.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../script/components/form/Barcode.js"></script>
+
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../custom/Forma.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../custom/App.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="../script/main.js"></script>
+</body>
+</html>
