@@ -9,6 +9,10 @@ body {
     -webkit-touch-callout: none;
 }
 
+h1 {
+    text-align:center;
+}
+
 .centered-container {
     margin: 0 auto;
     width: 900px;
@@ -203,7 +207,7 @@ fieldset {
     margin: .7em 0;
 }
 
-.fieldset-about h1 {
+.fieldset-about h2 {
     font-size: 1.6em;
     margin-top: 0;
     margin-bottom: 0.7em;
@@ -211,7 +215,7 @@ fieldset {
     cursor: pointer;
 }
 
-.fieldset-about h1:after {
+.fieldset-about h2:after {
     content: 'keyboard_arrow_down';
  
     position: absolute;
@@ -227,7 +231,7 @@ fieldset {
     color: #f26437;
 }
 
-.toggle-fieldset-about:checked ~ .fieldset-about h1:after {
+.toggle-fieldset-about:checked ~ .fieldset-about h2:after {
     content: 'keyboard_arrow_up';
 }
 
@@ -328,7 +332,7 @@ fieldset {
 }
 
 
-h2 {
+h3 {
     font-size: 1.3em;
     text-transform: uppercase;
     margin: 0 0 .2em 0;
