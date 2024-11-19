@@ -11,7 +11,7 @@ class Forma extends React.Component {
 
         return(
             <form className="uplatnica" >
-                <img className="uplatnica__img" src="./img/uplatnica.jpg"/>
+                <img className="uplatnica__img" src="../img/uplatnica.jpg"/>
                 <fieldset className="fieldset-platitelj">
                     <ConnectedTextInput id="platitelj__ime" label="ime i prezime / naziv" />
                     <ConnectedTextInput id="platitelj__adresa" label="adresa" />
