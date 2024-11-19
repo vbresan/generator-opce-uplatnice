@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Opća uplatnica HUB 3A (DE), bar kod generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Generiraj bar kod za opće uplatnice HUB 3A (DE). Napravi opću uplatnicu koja sadrži 2D barkod za plaćanje. Online, brzo i jednostavno.">
+
+    <link rel="stylesheet" type="text/css" href="style.css" async />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81SL566QVR"></script>
+    <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-81SL566QVR');
+    </script>
+</head>
+<body>
+	<h1>Opća uplatnica HUB 3A, bar kod generator</h1>
+    <div class="centered-container">
+        <input type="checkbox" class="toggle-fieldset-about" name="toggle-fieldset-about" id="toggle-fieldset-about" />
+        <fieldset class="fieldset-about" >
+            <label for="toggle-fieldset-about"><h2 onClick={this.handleClick}>Upute & Info</h2></label>
+            <h3>Što je ovo?</h3>
+            <p>Ovo je web aplikacija pomoću koje možete generirati nacionalni nalog za plaćanje HUB 3A sa 2D bar kodom.</p>
+            <h3>Kako se koristi?</h3>
+            <p>Nalog za plaćanje popunjavate tako da kliknete na polje koje želite popuniti. 2D bar kod će biti generiran automatski.</p>
+            <p>Obratite pažnju na polja označena žutom bojom. Ona nam govori da polje nije ispravno popunjeno. 2D kod neće biti generiran sve dok sva polja nisu ispravno popunjena!</p>
+            <h3>Spremanje naloga za plaćanje</h3>
+            <p>Nakon što unesete nalog za plaćanje, možete ga spremiti za kasniju upotrebu (može biti naknadno mijenjan). To možete napraviti na dva načina:</p>
+                <ul>
+                    <li>spremanje u web preglednik</li>
+                    <li>spremanje u datoteku</li>
+                </ul>
+            <p><strong>SPREMANJE U WEB PREGLEDNIK</strong><br/>Ako odaberete spremanje <strong>u web preglednik</strong> unešeni podaci će biti trajno spremljeni unutar preglednika koji trenutno koristite. Tako spremljeni nalozi za plaćanje su prikazani u padajućoj listi u okviru za učitavanje naloga. Kod ovog načina spremanja naloge koje ste prethodno spremili ćete jako lagano pronaći. Mana je što će spremljeni nalozi biti dostupi samo na računalu na kojem su spremljeni.</p>
+            <p><strong>SPREMANJE U DATOTEKU</strong><br/>Ako odaberet opciju spremanja <strong>u datoteku</strong> ta datoteka će biti spremljena na vaše računalo. Prednost ovog načina je što dobivenu datoteku možete poslati putem e-maila, kopirati na USB stick, spremiti na Google Drive ili One Drive. Mana ovog načina je što ćete morati razmišljati kamo ste datoteku spremili svaki puta kada vam ona zatreba.</p>
+            <p><strong>SPREMANJE U PDF</strong><br/>Ako želite popunjeni nalog za plaćanje spremiti u PDF kliknite na ISPIS NALOGA, te umjesto pisača odaberite spremanje u PDF format.</p>
+            <h3>Motivacija</h3>
+            <p>Neke tvrtke uz svoje račune šalju uplatnice (HUB 3A) koje ne sadrže 2D kod, što onemogućuje plaćanje tih računa u Konzumu i Tisku.</p>
+            <p>Pomoću ovog generatora možete generirati uplatnicu sa 2D kodom, koju ćete moći uplatiti na blagajnama Konzuma, kioscima Tiska i slično.</p>
+            <p>Izvorni kod ove web aplikacije možete pronaći na slijedećoj GitHub stranici: <a href="https://github.com/vbresan/uplatime" target="_blank">uplatime</a> </p>
+            <h3 class="color-red">UPOZORENJE</h3>
+            <p class="color-red">Autor ove web aplikacije NE jamči za ispravnost generiranog 2D koda.</p>
+            <p class="color-red">OBAVEZNO prije korištenje ove uplatnice programom za skeniranje 2D koda provjerite jesu li informacije sadržane u kodu ispravne.</p>
+            <p class="color-red">Činom upotrebe ovog generatora preuzimate punu materijalnu i pravnu odgovornost za posljedice koje korištenje generirane uplatnice može imati!</p>
+        </fieldset>
+        <div id="container"></div>
+        <div class="uplatnica__disclaimer">
+            <p><strong>VAŽNO UPOZORENJE</strong></p>
+            <p>Autor ove web aplikacije NE jamči za ispravnost generiranog 2D koda. OBAVEZNO prije korištenje ove uplatnice programom za skeniranje 2D koda provjerite da li su informacije sadržane u kodu ispravne. Činom upotrebe ovog generatora preuzimate punu materijalnu i pravnu odgovornost za posljedice koje korištenje generirane uplatnice može imati!</p>
+        </div>
+    </div>
+	
+    <br />
+    <p style="text-align:center">
+    	Partneri:
+    	<a href="https://novine.eu"         target="_blank" rel="noopener noreferrer">Novine.eu - Kratke vijesti</a> | 
+    	<a href="https://mojamirovina.com"  target="_blank" rel="noopener noreferrer">Izračun (kalkulator) mirovine</a> | 
+    	<a href="https://eurokonverter.com" target="_blank" rel="noopener noreferrer">Euro konverter</a>
+   	</p>
+
+    <script src="https://unpkg.com/react@16.5.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.5.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/redux@4.0.0/dist/redux.js"></script>
+    <script src="https://unpkg.com/react-redux@5.0.7/dist/react-redux.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Material+Icons" rel="stylesheet" lazyload="1" />
+    <script src="./script/lib/bcmath-min.js"></script>
+	<script src="./script/lib/pdf417-min.js"></script>
+    <script src="./script/lib/BarcodePayment.js?v=1"></script>
+    <script src="./script/lib/Blob.js"></script>
+
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/Format.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/lib/paymentParamsFacade.js"></script>
+
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/redux/actions.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/redux/reducers.js"></script>
+    
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/form/ReduxConnector.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/form/ButtonBox.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/form/TextInput.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/form/SelectBase.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/form/IntentCodes.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/form/PaymentModels.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/form/SpremljeniNaloziSelect.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/form/TextArea.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/form/Potvrda.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/form/Barcode.js"></script>
+
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/LoadDialog.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/LoadDialogContainer.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/SaveDialog.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/SaveDialogContainer.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./Forma.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/components/App.js"></script>
+    <script type="text/babel" data-plugins="transform-es2015-modules-umd,transform-object-rest-spread" src="./script/main.js"></script>
+</body>
+</html>
